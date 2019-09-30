@@ -11,3 +11,10 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
+
+# Use dark background (so comments are not dark blue)
+set background=dark
+# Changes color from `peachpuff` (default for light) to `ron` (default for dark)
+
+# Vim color themes: https://unix.stackexchange.com/a/88880
+
