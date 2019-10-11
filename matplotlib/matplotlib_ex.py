@@ -1,8 +1,12 @@
-## Matplotlib example to save time
+## Matplotlib template example to save time
 
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 
+########################################
+# Powers: Plotting points
+########################################
 fig, axs = plt.subplots(1, 2)
 fig.set_size_inches(12, 5)
 
@@ -21,7 +25,6 @@ ax.set_title("Some function")
 ax.grid()
 ax.legend()
 
-
 ax = axs[1]
 ax.plot(xx, ww, label="4th", color='black', linestyle="", marker="o")
 ax.plot(xx, uu, label="fifth", color='purple')
@@ -31,5 +34,37 @@ ax.set_title("Some function")
 ax.grid()
 ax.legend()
 
-fig.savefig("powers.png", dpi=300, bbox_inches="tight")
+fig.savefig("img/powers.png", dpi=100, bbox_inches="tight") 
+# dpi=300 good for printing
+plt.show()
+
+########################################
+# Iris: Plotting bar graphs
+########################################
+
+iris = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv")
+df = iris.groupby("species").mean()
+N = len(df.columns)
+
+fig, ax = plt.subplots(1, 1)
+fig.set_size_inches(12, 7)
+
+ind = np.arange(N) # the x-location for the groups
+width = 0.15 # bar width
+
+ax.set_ylabel("Size")
+ax.set_xticks(ind)
+ax.set_xticklabels(df.columns)
+ax.set_title("Average iris parameters across species")
+ax.grid()
+
+y0 = df.loc["setosa", :]
+rects0 = ax.bar(ind-width, y0, width)
+y1 = df.loc["versicolor", :]
+rects1 = ax.bar(ind, y1, width)
+y2 = df.loc["virginica", :]
+rects2 = ax.bar(ind+width, y2, width)
+ax.legend((rects0[0], rects1[0], rects2[0]), df.index)
+
+fig.savefig("img/iris.png", dpi=100, bbox_inches="tight") 
 plt.show()
