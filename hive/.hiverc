@@ -1,0 +1,19 @@
+# Abhishek hiverc file.
+
+# show columns in select(*) query
+# This is a MUST!
+set hive.cli.print.header=true;
+
+# show database at prmopt
+set hive.cli.print.current.db=true;
+
+# set engine to tez
+set hive.execution.engine=tez;
+
+# prevent hive adding the database with column headers
+# (enabled by default)
+set hive.resultset.use.unique.column.names=false;
+
+# Enable vectorized execution:
+# (Needs data in orc format)
+set hive.vectorized.execution.enabled = true;
