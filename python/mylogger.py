@@ -6,6 +6,7 @@
 from datetime import datetime # log file name
 from os.path import join
 from pathlib import Path    # to create directory
+from pytz import timezone    # need only if system timezone different, e.g. remote server
 
 import logging
 import os
@@ -14,7 +15,8 @@ def main():
     log_folder_path = os.path.dirname(os.path.abspath(__file__))
     Path(str(__file__).replace('.py', '_log')).mkdir(parents=True, exist_ok=True) 
     log_folder_path = join(log_folder_path, str(__file__).replace('.py', '_log'))
-    log_file_name = datetime.now().strftime('run_%Y_%m_%d_%H_%M.log')
+    log_file_name = datetime.now(timezone("US/Central")).strftime('run_%Y_%m_%d_%H_%M.log')
+            # if timezone is same, use datetime.now().strftime(...)
     log_file_path = join(log_folder_path, log_file_name)
     logging.basicConfig(filename=log_file_path, level=logging.DEBUG, 
                         format='%(asctime)s %(message)s', 
