@@ -1,13 +1,22 @@
 ## Random git-related notes
 ---
 
-#### Turn off LF/CRLF warning (see [here](https://stackoverflow.com/a/14640908))
+- ### Switch between `vim` and `VS Code` as commit editors:
+
+```
+git config --global core.editor "code --wait"
+git config --global core-editor "vi"
+```
+**Reference** [here](https://stackoverflow.com/a/52196507)
+
+
+- ### Turn off LF/CRLF warning (see [here](https://stackoverflow.com/a/14640908))
 
 ```
 git config --global core.safecrlf false
 ```
 
-#### Maintain multiple repositories from same laptop
+- ### Maintain multiple repositories from same laptop
 
 **Problem**: Suppose I have two github accounts and would like to work with both using the same local machine. How to use different encryption keys for them?
 
