@@ -1,6 +1,7 @@
 # .bashrc
 
 # Source global definitions
+# Bash prompt becomes [user@machine ~]$
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
