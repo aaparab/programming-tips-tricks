@@ -9,6 +9,13 @@ git config --global core-editor "vi"
 ```
 **Reference** [here](https://stackoverflow.com/a/52196507)
 
+- ### Fast-forward a branch to head:
+
+I made changes to local whereas someone else made changes to remote. When I do `git status`, I get:
+> Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+
+Solution: (Taken from [here](https://stackoverflow.com/a/9512565))
+```git merge --ff-only origin/master```
 
 - ### Turn off LF/CRLF warning (see [here](https://stackoverflow.com/a/14640908))
 
