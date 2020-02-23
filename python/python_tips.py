@@ -45,6 +45,7 @@ print(cp.stdout.decode("ascii"))
 ########################################
 
 # Reference: https://www.geeksforgeeks.org/working-with-pdf-files-in-python/
+# To solve error or printing blank page, see [here](https://stackoverflow.com/a/51331661/8100373)
 import PyPDF2
 
 # see number of pages
@@ -57,12 +58,11 @@ def PDFmerge(pdfs, output):
     pdfMerger = PyPDF2.PdfFileMerger() # creating pdf file merger object 
 
     for pdf in pdfs: # appending pdfs one by one 
-        with open(pdf, 'rb') as f: 
-            pdfMerger.append(f)
+        pdfMerger.append(PyPDF2.PdfFileReader(f), 'rb')
 
     with open(output, 'wb') as f: # writing combined pdf to output pdf file 
         pdfMerger.write(f)
-
+        
 # pdf split
 def PDFsplit(pdf, splits): 
     pdfFileObj = open(pdf, 'rb') # creating input pdf file object 
