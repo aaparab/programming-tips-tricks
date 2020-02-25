@@ -8,6 +8,17 @@
 du -sch .[!.]* * |sort -h
 
 
+# Read input from the user and perform actions
+
+read -n1 -rep "Starting conda environments. Press
+(0) or (p) for Python,
+(1) or (r) for R: " inp
+case $inp in
+        0|p|P) conda activate basenv ;;
+        1|r|R) conda activate renv ;;
+        *) conda deactivate ;;
+esac
+
 
 # Perform a command repeatedly
 # Reference: https://www.tecmint.com/run-repeat-linux-command-every-x-seconds/
