@@ -6,6 +6,12 @@
 conda create --name r_env r-essentials jupyterlab
 ```
 
+#### The pain in the nect that is R
+- Why is `stringsAsFactors` not `FALSE` by default?
+```
+read.csv("file.csv", stringsAsFactors = FALSE)
+```
+
 #### Write and install R packages
 
 - To make package:
