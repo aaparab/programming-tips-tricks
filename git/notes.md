@@ -13,6 +13,22 @@
 	git stash pop
 	```
 
+- ### Ignored added files after changing `.gitignore`
+
+	**Issue:** How to refresh the file index after making changes to `.gitignore`? 
+	
+	**Solution:** Found [here](https://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore)
+	
+	```
+	git rm -r --cached .
+	git add --all
+	git commit -m "Remove ignored files."
+	```
+	(or)
+	```
+	git update-index --assume-unchanged .
+	```
+
 - ### Switch between `vim` and `VS Code` as commit editors:
 
 	```
