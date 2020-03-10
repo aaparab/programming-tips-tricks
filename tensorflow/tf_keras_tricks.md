@@ -55,6 +55,8 @@ patch()
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 ```
+([Reference 1](https://github.com/tensorflow/tensorflow/issues/8037), [Reference 2](https://stackoverflow.com/a/47227886))
+
 - 0 (default): displaying all logs
 - 1: filter out INFO logs
 - 2: additionally filter out WARNINGS
