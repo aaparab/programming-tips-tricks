@@ -26,7 +26,9 @@ esac
 watch --difference --interval 5 nvidia-smi
 watch script.sh
 
+# Follow the end of file as it is being written
 
+tail --follow <filepath>
 
 # Change system timezone without SUDO access
 # (for instance, remote server, cloud).
