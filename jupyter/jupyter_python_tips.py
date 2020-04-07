@@ -7,6 +7,11 @@ from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 
 ########################################
+# Change font family [Reference](https://github.com/jupyterlab/jupyterlab/issues/5387)
+########################################
+# "fontFamily": "'DejaVu Sans Mono', 'Noto Sans Mono', 'Everson Mono', FreeMono, Menlo, Terminal, monospace",
+
+########################################
 # Reload a module
 ########################################
 from importlib import reload
