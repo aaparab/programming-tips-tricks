@@ -7,3 +7,6 @@
 3. Add the public key to the destination by `ssh-copy-id -i ~/.ssh/id_rsa.pub <remote-user>@<remote-host>`
 4. From my Dell machine, I do: ssh-copy-id -i /c/Users/msabp/.ssh/id_rsa.pub csmrnd01
 5. Reference: https://goo.gl/8vdzGE
+
+#### Force password input:
+1. `ssh -o PubkeyAuthentication=no www.server.com`
