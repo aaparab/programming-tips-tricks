@@ -2,6 +2,9 @@
 Read CSV files in C++, convert string to float. 
 */
 
+#include <fstream> // to read csv files
+#include <sstream> // for std::istringstream
+
 class CSVRow
 {
     private:
