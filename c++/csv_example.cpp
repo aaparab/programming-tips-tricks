@@ -7,6 +7,8 @@ ID,Name,Math,English,Science
 3,Chuck,80,65,85
 */
 
+#include <iostream>
+#include<vector>
 #include "csv.h"
 
 int main()
