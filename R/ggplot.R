@@ -25,4 +25,5 @@ dt <- flatten(dt, c('old', 'new'), c('id'), c('value', 'level'))
 dt %>% head()
 
 ggplot(data = dt, aes(x = id, y = value, fill = level)) + 
-    geom_bar(position = 'dodge', stat = 'identity')
+    geom_bar(position = 'dodge', stat = 'identity') +
+    ggsave('bars.png')
