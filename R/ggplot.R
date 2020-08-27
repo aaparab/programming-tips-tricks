@@ -27,3 +27,6 @@ dt %>% head()
 ggplot(data = dt, aes(x = id, y = value, fill = level)) + 
     geom_bar(position = 'dodge', stat = 'identity') +
     ggsave('bars.png')
+
+# If `flatten` or `melt` is not an option, 
+# see here - https://stackoverflow.com/a/10355844/8100373 
