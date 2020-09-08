@@ -30,3 +30,6 @@ ggplot(data = dt, aes(x = id, y = value, fill = level)) +
 
 # If `flatten` or `melt` is not an option, 
 # see here - https://stackoverflow.com/a/10355844/8100373 
+
+# For multiple plots, see here - 
+# http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_%28ggplot2%29/
