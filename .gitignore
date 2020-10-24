@@ -1,3 +1,7 @@
+# Abhishek added for Mac:
+.DS_Store
+raspberrypi/.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
