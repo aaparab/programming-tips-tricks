@@ -88,3 +88,12 @@
 	cat dir2/.git/config
 	git@github-2:<user2>/<repo2>.git
 	```
+	
+- ### Addendum to above: 
+
+	- Global config is stored at `~/.gitconfig` and can be accessed using `git config --list`. 
+	- To update name and email for a specific local repository, use 
+	```
+	git config user.name "Foo Name"
+	git config user.email "foo@email.com"
+	```
