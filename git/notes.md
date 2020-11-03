@@ -12,6 +12,14 @@
 	git pull origin master
 	git stash pop
 	```
+	
+- ### `master` is offensive:
+	**Issue:** Github has renamed the default branch from `master` to `main` whereas a newly created repository has `master` as the default branch. This causes problems with `git pull`. To solve this, let us rename our local `master` branch to `main`. 
+	
+	**Solution:** (Taken from [here](https://hackernoon.com/how-to-rename-your-git-repositories-from-master-to-main-6i1u3wsu))
+	```
+	git branch -m master main
+	```
 
 - ### Ignored added files after changing `.gitignore`
 
