@@ -1,6 +1,32 @@
 # Jupyter tricks related to Python
 
 ########################################
+# Make config changes, e.g., autocomplete
+########################################
+# Permanently enable auto-complete instead of
+%config Completer.use_jedi = False
+# Taken from here: https://stackoverflow.com/a/66032603/8100373
+
+# Generate config
+ipython profile create
+# And change 
+c.IPCompleter.use_jedi = False in ipython_config.py
+
+# To find line number in vim:
+with open('/home/msabp/.ipython/profile_default/ipython_config.py', 'r') as f:
+    file = f.readlines()
+
+for i, line in enumerate(file):
+    if 'use_jedi' in line:
+        print("{}\t{}".format(i, line))
+>> 945	# c.Completer.use_jedi = True
+>> 1006	#  See also: Completer.use_jedi
+>> 1007	# c.IPCompleter.use_jedi = True
+
+# Finally in vim to go to line number:
+:1007
+
+########################################
 # View full output, not just last line
 ########################################
 from IPython.core.interactiveshell import InteractiveShell
