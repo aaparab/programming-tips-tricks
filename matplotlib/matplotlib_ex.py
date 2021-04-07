@@ -34,7 +34,7 @@ ax.set_title("Some function")
 ax.grid()
 ax.legend()
 
-fig.savefig("img/powers.png", dpi=100, bbox_inches="tight") 
+fig.savefig("img/powers.jpg", dpi=100, bbox_inches="tight") 
 # dpi=300 good for printing
 plt.show()
 
@@ -66,5 +66,5 @@ y2 = df.loc["virginica", :]
 rects2 = ax.bar(ind+width, y2, width)
 ax.legend((rects0[0], rects1[0], rects2[0]), df.index)
 
-fig.savefig("img/iris.png", dpi=100, bbox_inches="tight") 
+fig.savefig("img/iris.jpg", dpi=100, bbox_inches="tight") 
 plt.show()
