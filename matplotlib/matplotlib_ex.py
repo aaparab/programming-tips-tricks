@@ -9,6 +9,7 @@ import pandas as pd
 ########################################
 fig, axs = plt.subplots(1, 2)
 fig.set_size_inches(12, 5)
+fig.patch.set_facecolor('blue') # background color for fig instead of transparent (default)
 
 xx = np.arange(0, 5, 0.5)
 yy = xx**2
